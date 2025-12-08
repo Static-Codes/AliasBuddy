@@ -1,0 +1,12 @@
+/home/nerdy/repos/AliasBuddy/alias_buddy/target/debug/deps/tracing-0f6d62140aae8e6d.d: /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-0.1.43/src/lib.rs /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-0.1.43/src/macros.rs /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-0.1.43/src/dispatcher.rs /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-0.1.43/src/field.rs /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-0.1.43/src/instrument.rs /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-0.1.43/src/level_filters.rs /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-0.1.43/src/span.rs /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-0.1.43/src/subscriber.rs
+
+/home/nerdy/repos/AliasBuddy/alias_buddy/target/debug/deps/libtracing-0f6d62140aae8e6d.rmeta: /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-0.1.43/src/lib.rs /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-0.1.43/src/macros.rs /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-0.1.43/src/dispatcher.rs /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-0.1.43/src/field.rs /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-0.1.43/src/instrument.rs /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-0.1.43/src/level_filters.rs /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-0.1.43/src/span.rs /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-0.1.43/src/subscriber.rs
+
+/home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-0.1.43/src/lib.rs:
+/home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-0.1.43/src/macros.rs:
+/home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-0.1.43/src/dispatcher.rs:
+/home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-0.1.43/src/field.rs:
+/home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-0.1.43/src/instrument.rs:
+/home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-0.1.43/src/level_filters.rs:
+/home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-0.1.43/src/span.rs:
+/home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-0.1.43/src/subscriber.rs:

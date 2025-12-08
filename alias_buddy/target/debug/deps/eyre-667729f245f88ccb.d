@@ -1,0 +1,15 @@
+/home/nerdy/repos/AliasBuddy/alias_buddy/target/debug/deps/eyre-667729f245f88ccb.d: /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eyre-0.6.12/src/lib.rs /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eyre-0.6.12/src/backtrace.rs /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eyre-0.6.12/src/chain.rs /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eyre-0.6.12/src/context.rs /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eyre-0.6.12/src/error.rs /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eyre-0.6.12/src/fmt.rs /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eyre-0.6.12/src/kind.rs /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eyre-0.6.12/src/macros.rs /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eyre-0.6.12/src/option.rs /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eyre-0.6.12/src/ptr.rs /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eyre-0.6.12/src/wrapper.rs
+
+/home/nerdy/repos/AliasBuddy/alias_buddy/target/debug/deps/libeyre-667729f245f88ccb.rmeta: /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eyre-0.6.12/src/lib.rs /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eyre-0.6.12/src/backtrace.rs /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eyre-0.6.12/src/chain.rs /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eyre-0.6.12/src/context.rs /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eyre-0.6.12/src/error.rs /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eyre-0.6.12/src/fmt.rs /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eyre-0.6.12/src/kind.rs /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eyre-0.6.12/src/macros.rs /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eyre-0.6.12/src/option.rs /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eyre-0.6.12/src/ptr.rs /home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eyre-0.6.12/src/wrapper.rs
+
+/home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eyre-0.6.12/src/lib.rs:
+/home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eyre-0.6.12/src/backtrace.rs:
+/home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eyre-0.6.12/src/chain.rs:
+/home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eyre-0.6.12/src/context.rs:
+/home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eyre-0.6.12/src/error.rs:
+/home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eyre-0.6.12/src/fmt.rs:
+/home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eyre-0.6.12/src/kind.rs:
+/home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eyre-0.6.12/src/macros.rs:
+/home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eyre-0.6.12/src/option.rs:
+/home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eyre-0.6.12/src/ptr.rs:
+/home/nerdy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eyre-0.6.12/src/wrapper.rs:
