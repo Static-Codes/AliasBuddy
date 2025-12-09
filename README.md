@@ -1,7 +1,7 @@
 Simple CLI Application for Debian and Fedora Based Linux Distributions.
 
 What it does:
-- Parses `~/.bashrc` and `~/.bash_aliases` for a list of aliases.
+- Parses `~/.bash_aliases` for a list of aliases.
 - Parses `alias <alias-name>="command"` using regex
 - Parses `
   function <function-name>() {
