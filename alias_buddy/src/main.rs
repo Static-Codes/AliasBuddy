@@ -1,35 +1,30 @@
-use color_eyre::Result;
-use crossterm::event::{self, Event};
-use ratatui::{DefaultTerminal, Frame};
-use std::collections::HashMap;
+use dialoguer::{theme::ColorfulTheme, Select};
 use std::env;
-use std::fs::{File};
-use std::io::{self};
-use std::path::{Path, PathBuf};
+use std::fs::File;
+use std::io;
+use std::path::PathBuf;
+use regex::Regex;
 
-fn main() { //-> Result<()> {
-    // let bash_rc_path = get_bash_rc_path();
-    let bash_aliases_path = get_bash_aliases_path();
-    // let bash_rc_path_str = bash_rc_path.to_str().unwrap_or_default();
-    let bash_aliases_str = bash_aliases_path.to_str().unwrap_or_default();
 
-    // println!("{bash_rc_path_str}");
-    // println!("{bash_aliases_str}");
-    parse_aliases();
-    // color_eyre::install()?;
-    // let terminal = ratatui::init();
-    // let result = run(terminal);
-    // ratatui::restore();
-    // result
-}
-
-fn run(mut terminal: DefaultTerminal) -> Result<()> {
-    loop {
-        terminal.draw(render)?;
-        if matches!(event::read()?, Event::Key(_)) {
-            break Ok(());
-        }
+fn main() {
+    let re = Regex::new(r"(?:function{0,1} |)([A-Za-z-_]{2,})(?:\(\))|(?:alias\W(.*)(?:=))").unwrap();
+    let aliases = parse_aliases(re);
+    if aliases.is_empty() {
+        println!("No aliases are found, please ensure your aliases are present in ~/.bash_aliases");
+        return;
     }
+
+
+    let selections = &aliases;
+    let selection = Select::with_theme(&ColorfulTheme::default())
+        .with_prompt("Choose an alias to execute")
+        .default(0)
+        .items(&selections[..])
+        .interact()
+        .unwrap();
+
+    let selection_value = &selections[selection];
+    println!("{selection_value}");
 }
 
 
@@ -45,35 +40,21 @@ fn get_bash_aliases_path() -> PathBuf {
     return home_dir.join( ".bash_aliases");
 }
 
-// fn get_bash_rc_path() -> PathBuf {
-//     let home_dir: PathBuf = get_home_dir();
-//     return home_dir.join(".bashrc");
-// }
 
-fn read_file(path: PathBuf) -> io::Result<Vec<u8>> {
+fn read_file(path: PathBuf) -> io::Result<String> {
     let mut file: File = File::open(path)?;
-    let mut buffer: Vec<u8> = vec![];
-    let _: usize = io::Read::read_to_end(&mut file, &mut buffer)?;
+    let mut buffer: String = String::new();
+    let _: usize = io::Read::read_to_string(&mut file, &mut buffer)?;
     Ok(buffer)
 }
 
-fn parse_aliases() {
-    // let bash_rc_vector: Vec<u8> = read_file(get_bash_rc_path()).unwrap_or_default();
-    let bash_aliases_vector: Vec<u8> = read_file(get_bash_aliases_path()).unwrap_or_default();
+fn parse_aliases(re: Regex) -> Vec<String>{
+    let bash_aliases_content: String = read_file(get_bash_aliases_path()).unwrap_or_default();
+    // println!("{bash_aliases_content}");
+    let mut results: Vec<String> = vec![];
 
-    // let bash_rc_contents: &str =  str::from_utf8(&bash_rc_vector).unwrap_or_default();
-    let bash_aliases_content: &str = str::from_utf8(&bash_aliases_vector).unwrap_or_default();
-    // let use_rc: bool = !bash_rc_contents.is_empty();
-    // let use_aliases: bool = !bash_aliases_content.is_empty();
-    // println!("{bash_rc_contents}");
-    println!("{bash_aliases_content}");
-}
-
-fn create_aliases_hashmap() {
-
-}
-
-// Commands will go here
-fn render(frame: &mut Frame) {
-    frame.render_widget("hello world", frame.area());
+    for [path] in re.captures_iter(&bash_aliases_content).map(|c| c.extract().1) {
+        results.push(path.to_owned());
+    }
+    return results;
 }
