@@ -1,5 +1,4 @@
-
-This application will be a simple application, likely under 1000 lines of code as it will rely on an external library for CLI input.
+Simple CLI Application for Debian and Fedora Based Linux Distributions.
 
 What it does:
 - Parses `~/.bashrc` and `~/.bash_aliases` for a list of aliases.
