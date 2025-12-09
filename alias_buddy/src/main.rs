@@ -26,7 +26,6 @@ fn main() {
     let selection_value = &selections[selection];
     let child = Command::new("bash")
         .args(["-c", "-i", selection_value])
-        // .arg(selection_value)
         .spawn()
         .expect("Failed to spawn a child process for the selected alias.");
     println!("Spawned new process for the selected alias, PID: {}", child.id());
@@ -55,7 +54,6 @@ fn read_file(path: PathBuf) -> io::Result<String> {
 
 fn parse_aliases(re: Regex) -> Vec<String>{
     let bash_aliases_content: String = read_file(get_bash_aliases_path()).unwrap_or_default();
-    // println!("{bash_aliases_content}");
     let mut results: Vec<String> = vec![];
 
     for [path] in re.captures_iter(&bash_aliases_content).map(|c| c.extract().1) {

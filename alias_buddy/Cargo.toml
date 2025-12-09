@@ -2,9 +2,31 @@
 name = "alias_buddy"
 version = "0.1.0"
 authors = ["Static Codes <210101922+Static-Codes@users.noreply.github.com>" ]
+maintainer = "Static Codes <210101922+Static-Codes@users.noreply.github.com>"
+copyright = "2025, Static Codes <210101922+Static-Codes@users.noreply.github.com>"
+description = """A simple application to run aliased commands on debian or fedora based Linux distributions."""
+homepage = "https://github.com/Static-Codes/AliasBuddy"
 license = "Unlicense"
 edition = "2024"
+
 
 [dependencies]
 regex = "1.12.2"
 dialoguer = "0.12.0"
+
+[package.metadata.deb]
+maintainer = "Static Codes <210101922+Static-Codes@users.noreply.github.com>"
+copyright = "2025, Static Codes <210101922+Static-Codes@users.noreply.github.com>"
+extended-description = """A simple application to run aliased commands on debian or fedora based Linux distributions."""
+depends = "$auto"
+section = "utility"
+license = "Unlicense"
+priority = "optional"
+assets = [
+ ["target/release/alias_buddy", "usr/bin/", "755"],
+]
+
+[package.metadata.generate-rpm]
+assets = [
+    { source = "target/release/alias_buddy", dest = "/usr/bin/alias_buddy", mode = "755" },
+]
