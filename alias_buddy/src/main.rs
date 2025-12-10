@@ -31,16 +31,8 @@ fn main() {
     println!("Spawned new process for the selected alias, PID: {}", child.id());
 }
 
-
-fn get_home_dir() -> PathBuf {
-    if let Ok(home_dir) = env::var("HOME") {
-        return PathBuf::from(home_dir);
-    }
-    return PathBuf::from("~"); // This will likely fail
-}
-
 fn get_bash_aliases_path() -> PathBuf {
-    let home_dir = get_home_dir();
+    let home_dir = env::home_dir().unwrap_or_default();
     return home_dir.join( ".bash_aliases");
 }
 
