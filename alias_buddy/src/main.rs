@@ -4,7 +4,7 @@ use std::fs::File;
 use std::io;
 use std::path::PathBuf;
 use regex::Regex;
-use std::process::Command;
+use std::process::{Command, Stdio};
 
 fn main() {
     let re = Regex::new(r"(?:function{0,1} |)([A-Za-z-_]{2,})(?:\(\))|(?:alias\W(.*)(?:=))").unwrap();
@@ -24,11 +24,17 @@ fn main() {
         .unwrap();
 
     let selection_value = &selections[selection];
-    let child = Command::new("bash")
+    
+    let mut child = Command::new("bash")
         .args(["-c", "-i", selection_value])
+        .stdin(Stdio::inherit())
+        .stdout(Stdio::inherit())
+        .stderr(Stdio::inherit())
         .spawn()
         .expect("Failed to spawn a child process for the selected alias.");
-    println!("Spawned new process for the selected alias, PID: {}", child.id());
+
+    let result = child.wait().expect("Failed to wait for the newly spawned child process.");
+    println!("End Result: {}", result);
 }
 
 fn get_bash_aliases_path() -> PathBuf {
