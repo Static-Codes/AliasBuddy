@@ -20,13 +20,13 @@ copyright = "2025, Static Codes <210101922+Static-Codes@users.noreply.github.com
 extended-description = """A simple application to run aliased commands on debian or fedora based Linux distributions."""
 depends = "$auto"
 section = "utility"
-license = "Unlicense"
+license-file = "../LICENSE"
 priority = "optional"
 assets = [
- ["target/release/alias_buddy", "usr/bin/", "755"],
+ ["target/release/alias_buddy", "usr/local/bin/alias_buddy", "755"],
 ]
 
 [package.metadata.generate-rpm]
 assets = [
-    { source = "target/release/alias_buddy", dest = "/usr/bin/alias_buddy", mode = "755" },
+    { source = "target/release/alias_buddy", dest = "/usr/local/bin/alias_buddy", mode = "755" },
 ]
