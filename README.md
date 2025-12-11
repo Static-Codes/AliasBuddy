@@ -1,4 +1,5 @@
-Simple CLI Application for Debian and Fedora Based Linux Distributions.
+# AliasBuddy
+## Simple CLI Application for Debian and Fedora Based Linux Distributions.
 
 What it does:
 - Parses `~/.bash_aliases` for a list of aliases.
