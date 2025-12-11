@@ -12,6 +12,3 @@ What it does:
 - Displays the commands available.
 - Allows for users to select a command from an available list.
 ---
-
-Current Bugs
- - Doesn't work with applications that require a callback, currently only occuring with `nano`, but will likely occur in other similiar applications.
