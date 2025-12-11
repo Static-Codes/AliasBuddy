@@ -9,11 +9,11 @@ use std::process::{Command, Stdio};
 fn main() {
     let re = Regex::new(r"(?:function{0,1} |)([A-Za-z-_]{2,})(?:\(\))|(?:alias\W(.*)(?:=))").unwrap();
     let aliases = parse_aliases(re);
+    
     if aliases.is_empty() {
         println!("No aliases are found, please ensure your aliases are present in ~/.bash_aliases");
         return;
     }
-
 
     let selections = &aliases;
     let selection = Select::with_theme(&ColorfulTheme::default())
@@ -41,7 +41,6 @@ fn get_bash_aliases_path() -> PathBuf {
     let home_dir = env::home_dir().unwrap_or_default();
     return home_dir.join( ".bash_aliases");
 }
-
 
 fn read_file(path: PathBuf) -> io::Result<String> {
     let mut file: File = File::open(path)?;
