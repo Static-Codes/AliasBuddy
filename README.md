@@ -20,7 +20,7 @@ What it does:
 Known limitations:
 - Cannot run aliases that require cli input such as:
 ```
-alias alias-name="command-name argument1 argument2 "
-alias-name argument3 # Not supported
+alias example-alias="command-name argument1 argument2 "
+example-alias argument3
 ```
 		
