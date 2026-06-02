@@ -1,6 +1,9 @@
 # AliasBuddy
 ### Simple CLI Application for Debian and Fedora Based Linux Distributions.
 
+# Archival Notice:
+- While this project has functional releases, it will not be updated further as of 06/02/2026.
+  
 What it does:
 - Parses the contents of `~/.bash_aliases` for a list of aliases.
 - Supported formats:
